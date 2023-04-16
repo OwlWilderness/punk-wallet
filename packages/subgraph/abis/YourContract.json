@@ -9,12 +9,12 @@
         "type": "address"
       }
     ],
-    "name": "Wave",
+    "name": "Hoot",
     "type": "event"
   },
   {
     "inputs": [],
-    "name": "wave",
+    "name": "hoot",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"

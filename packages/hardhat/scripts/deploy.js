@@ -9,9 +9,9 @@ const main = async () => {
 
   console.log("\n\n 📡 Deploying...\n");
 
-  const yourContract = await deploy("YourContract") // <-- add in constructor args like line 19 vvvv
+  //const helloUniverse = await deploy("HelloUniverse",["0x06f0981022DDc612d56250036718cC58cC35eec5"]) // <-- add in constructor args like line 19 vvvv
 
-  //const yourContract = await ethers.getContractAt('YourContract', "0xaAC799eC2d00C013f1F11c37E654e59B0429DF6A") //<-- if you want to instantiate a version of a contract at a specific address!
+  const helloUniverse = await ethers.getContractAt('HelloUniverse', "0xb622e7e197E86c1Ad17cc9B9464Ef32c3c6FfBD7") //<-- if you want to instantiate a version of a contract at a specific address!
   //const secondContract = await deploy("SecondContract")
 
   // const exampleToken = await deploy("ExampleToken")
@@ -46,21 +46,21 @@ const main = async () => {
 
 
   //If you want to verify your contract on tenderly.co (see setup details in the scaffold-eth README!)
-  /*
+  
   await tenderlyVerify(
-    {contractName: "YourContract",
-     contractAddress: yourContract.address
+    {contractName: "HelloUniverse",
+     contractAddress: helloUniverse.address
   })
-  */
+  
 
   // If you want to verify your contract on etherscan
-  /*
+  
   console.log(chalk.blue('verifying on etherscan'))
   await run("verify:verify", {
-    address: yourContract.address,
-    // constructorArguments: args // If your contract has constructor arguments, you can pass them as an array
+    address: helloUniverse.address,
+     constructorArguments: ["0x06f0981022DDc612d56250036718cC58cC35eec5"] // If your contract has constructor arguments, you can pass them as an array
   })
-  */
+  
 
   console.log(
     " 💾  Artifacts (address, abi, and args) saved to: ",
@@ -151,7 +151,7 @@ function sleep(ms) {
 // If you want to verify on https://tenderly.co/
 const tenderlyVerify = async ({contractName, contractAddress}) => {
 
-  let tenderlyNetworks = ["kovan","goerli","mainnet","rinkeby","ropsten","matic","mumbai","xDai","POA"]
+  let tenderlyNetworks = ["kovan","goerli","mainnet","rinkeby","ropsten","matic","mumbai","xDai","POA","buidlguidl"]
   let targetNetwork = process.env.HARDHAT_NETWORK || config.defaultNetwork
 
   if(tenderlyNetworks.includes(targetNetwork)) {
