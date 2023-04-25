@@ -58,7 +58,7 @@ const { ethers } = require("ethers");
 const cachedNetwork = window.localStorage.getItem("network");
 let targetNetwork = NETWORKS[cachedNetwork || "ethereum"]; // <------- select your target frontend network (localhost, rinkeby, xdai, mainnet)
 if (!targetNetwork) {
-  targetNetwork = NETWORKS["ethereum"];
+  targetNetwork = NETWORKS["goerli"];
 }
 // 😬 Sorry for all the console logging
 const DEBUG = false;
