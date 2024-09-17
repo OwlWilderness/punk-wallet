@@ -413,9 +413,9 @@ export const NETWORKS = {
     color: "#92D9FA",
     chainId: 80001,
     gasPrice: 1000000000,
-    rpcUrl: "https://rpc-mumbai.maticvigil.com",
-    faucet: "https://faucet.matic.network/",
-    blockExplorer: "https://mumbai-explorer.matic.today/",
+    rpcUrl: "https://polygon-mumbai.g.alchemy.com/v2/7ls4W5wc3Cu-4-Zq2QaQxgUhJKjUIDay",
+    faucet: "https://https://mumbaifaucet.com/",
+    blockExplorer: "https://mumbai.polygonscan.com/",
   },
   testnetHarmony: {
     name: "testnetHarmony",
